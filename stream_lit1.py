@@ -7,24 +7,24 @@ def gamewin (comp, you):
         return None
 
 # Check for all possibilities when computer chose s
-    elif comp == "stone":
-        if you == "scissor":
+    elif comp == "stone 🌑":
+        if you == "scissor ✂":
             return False 
-        elif you == "paper":
+        elif you == "paper 📃":
             return True
 
 # Check for all possibilities when computer chose w 
-    elif comp == "paper":
-        if you == "stone":
+    elif comp == "paper 📃":
+        if you == "stone 🌑":
             return False 
-        elif you == "scissor":
+        elif you == "scissor ✂":
             return True
 
 # Check for all possibilities when computer chose g            
-    elif comp == "scissor":
-        if you == "paper":
+    elif comp == "scissor ✂":
+        if you == "paper 📃":
             return False 
-        elif you == "stone":
+        elif you == "stone 🌑":
             return True
         
 def main():
@@ -32,16 +32,16 @@ def main():
 
     compturn = random.randint(1, 3)
     if compturn == 1:
-        comp = "stone"
+        comp = "stone 🌑"
     elif compturn == 2:
-        comp = "paper"
+        comp = "paper 📃"
     elif compturn == 3:
-        comp = "scissor"
+        comp = "scissor ✂"
     else:
         comp = None
 
-    your = st.form("Your turn: stone (st) paper (pa) scissor (sc)")
-    you= st.selectbox('your turn',('stone','paper','scissor'))
+    your = st.form("Choose Here: stone (st) paper (pa) scissor (sc)")
+    you= st.selectbox('your turn',('stone 🌑','paper 📃','scissor ✂'))
     #if your == "st":
         #you = "stone"
     #elif your == "pa":
@@ -49,8 +49,8 @@ def main():
     #elif your == "sc":
         #you = "scissor"
 
-    #st.write(f"Computer chose: {comp}")
-    st.write(f"YOU chose: {you}")
+    st.write(f"Computer chose: {comp}")
+    #st.write(f"YOU chose: {you}")
 
     result = gamewin(comp, you)
     if result == None:
