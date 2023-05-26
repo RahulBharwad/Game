@@ -49,16 +49,16 @@ def main():
     #elif your == "sc":
         #you = "scissor"
 
-    st.write(f"Computer chose: {comp}")
+    #st.write(f"Computer chose: {comp}")
     st.write(f"YOU chose: {you}")
 
     result = gamewin(comp, you)
     if result == None:
-        st.write("TIE")
+        st.subheader("TIE")
     elif result == True:
-        st.write("YOU WON")
+        st.subheader("🥳🥳YOU WON")
     else:
-        st.write("SORRY, COMPUTER WON")
+        st.subheader("YOU LOST🤣🤣")
     #elif you == "choose between stone, paper, scissor":
         #st.write("Choose between stone, paper, scissor")
 
